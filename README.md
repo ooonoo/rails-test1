@@ -16,6 +16,14 @@ rails generate　model Post content:text
 ###　content = カラム名 
 ### text = データ型
 
+## テーブルの作成
+```SHELL
+rails db:migrate
+```
+マイグレーションファイルの内容をデータベースに反映する
+postsテーブル作成時に「id」,「create_at」,「updated_at」が自動生成
+(作成したのは「content」のみ)
+データベースに反映されていないマイグレージョンファイルが存在する状態でページにアクセスするとエラーとなる
 
 ## 繰り返し処理
 ###　記載内容
