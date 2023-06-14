@@ -6,7 +6,16 @@ rails generate controller posts index
 ```
 ### rails g　と省略可
 ### posts = コントローラ名
-### index アクション名
+### index = アクション名
+
+## マイグレーションファイル作成(データベースに変更を指示)
+```SHELL
+rails generate Post content:text
+```
+### Post 「postsテーブルを作成する場合は単数形で」
+###　content = カラム名 
+### text = データ型
+
 
 ## 繰り返し処理
 ###　記載内容
