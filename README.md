@@ -12,7 +12,8 @@ rails generate controller posts index
 ```SHELL
 rails generate　model Post content:text
 ```
-### Post 「postsテーブルを作成する場合は単数形で」
+### Post = モデル名 
+### 「postsテーブルを作成する場合は単数形で」
 ###　content = カラム名 
 ### text = データ型
 
