@@ -10,7 +10,7 @@ rails generate controller posts index
 
 ## マイグレーションファイル作成(データベースに変更を指示)
 ```SHELL
-rails generate Post content:text
+rails generate　model Post content:text
 ```
 ### Post 「postsテーブルを作成する場合は単数形で」
 ###　content = カラム名 
