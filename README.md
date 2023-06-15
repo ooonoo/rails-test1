@@ -39,6 +39,8 @@ post.content
 
 posts = Post.all
 Post.all[0].content
+posts[0].content
+posts[1].content
 
 quit
 ```
