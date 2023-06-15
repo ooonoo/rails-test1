@@ -26,13 +26,14 @@ postsテーブル作成時に「id」,「create_at」,「updated_at」が自動�
 (作成したのは「content」のみ)
 データベースに反映されていないマイグレージョンファイルが存在する状態でページにアクセスするとエラーとなる
 
-## コンソールの起動,終了
+## コンソールの起動,終了,インスタンスの作成コマンド
 ```SHELL
 rails console
-
+post = Post.new(content:"Hello world")
+post.save
 quit
 ```
-rubyコードが実行できる
+post.saveはpost.rbにより使える
 
 ## 繰り返し処理
 ###　記載内容
