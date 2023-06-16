@@ -46,6 +46,12 @@ quit
 ```
 post.saveはpost.rbにより使える
 
+
+## 共通のレイアウトをまとめる
+views/layouts/application.html.erbに共通事項はまとめる
+<header><head><body>タグなどでまとめて記載
+
+
 ## 繰り返し処理
 ###　記載内容
 ```SHELL
