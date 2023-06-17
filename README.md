@@ -51,7 +51,7 @@ post.saveはpost.rbにより使える
 views/layouts/application.html.erbに共通事項はまとめる
 <header><head><body>タグなどでまとめて記載
 
-## link to メソッド
+## link_toメソッド
 ```SHELL
 <a href="/">TweetApp</a>
 <%= link_to("TweetApp","/") %>
@@ -59,6 +59,13 @@ views/layouts/application.html.erbに共通事項はまとめる
 第一引数にはlinkのテキスト　"TweetApp"
 第二引数にはパスやURL "/"
 
+## find_byメソッド
+```SHELL
+rails console
+post = Post.find_by(id:3)
+post.content
+→ "Rails勉強中"
+```
 
 ## 繰り返し処理
 ###　記載内容
