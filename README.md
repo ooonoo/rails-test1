@@ -67,6 +67,15 @@ post.content
 → "Rails勉強中"
 ```
 
+## URLにidを含める
+```SHELL
+# routes.rb
+get "posts/:id" => "posts#show"
+# post_controller.rb
+def show
+end
+```
+
 ## 繰り返し処理
 ###　記載内容
 ```SHELL
