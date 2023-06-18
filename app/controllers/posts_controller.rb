@@ -3,5 +3,6 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
   def show
+    @id = params[:id]
   end
 end
