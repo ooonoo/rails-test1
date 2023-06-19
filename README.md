@@ -109,9 +109,15 @@ end
 ```
 フォームに入力された内容を("/post/create")に送信
 
-## カラムの更新
+## テーブル更新
 ```SHELL
 post = Post.find_by(id:1)
 post.content = "Rails"
 post.save
+```
+
+## テーブル削除
+```SHELL
+post = Post.find_by(id:1)
+post.destroy
 ```
