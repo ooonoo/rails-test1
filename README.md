@@ -108,3 +108,10 @@ end
 <% end %>
 ```
 フォームに入力された内容を("/post/create")に送信
+
+## カラムの更新
+```SHELL
+post = Post.find_by(id:1)
+post.content = "Rails"
+post.save
+```
