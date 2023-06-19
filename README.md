@@ -99,3 +99,12 @@ end
 <textarea></textarea>
 <input type="submit" value="投稿">
 ```
+
+## form_tagメソッド
+```SHELL
+<%= form_tag("/post/create")do %>
+<textarea></textarea>
+<input type="submit" value="投稿">
+<% end %>
+```
+フォームに入力された内容を("/post/create")に送信
