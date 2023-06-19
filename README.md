@@ -93,3 +93,9 @@ end
 ```SHELL
 　　肉 野菜 魚
 ```
+
+##　入力フォーム
+```SHELL
+<textarea></textarea>
+<input type="submit" value="投稿">
+```
