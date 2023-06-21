@@ -25,7 +25,12 @@ class PostsController < ApplicationController
     redirect_to ("/posts/index")
     # 投稿一覧画面に戻る
   end
+  
   def destroy
+    @post = Post.find_by(id: params[:id])
+    # URLのidから投稿データを取得する
+    @post.destroy
+    # 投稿を削除する
     redirect_to ("/posts/index")
   end
 end
