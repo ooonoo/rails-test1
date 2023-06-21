@@ -23,5 +23,9 @@ class PostsController < ApplicationController
     @post.save
     # 上書きした投稿データを保存する
     redirect_to ("/posts/index")
+    # 投稿一覧画面に戻る
+  end
+  def destroy
+    redirect_to ("/posts/index")
   end
 end
