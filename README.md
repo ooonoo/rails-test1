@@ -121,3 +121,12 @@ post.save
 post = Post.find_by(id:1)
 post.destroy
 ```
+
+## progateとの違い
+```SHELL
+{method: "post"}
+# ↓
+data: { "turbo-method": :post }
+```
+POSTメソッドの記述を変えればエラーがでなくなった
+リンクのデフォルトのHTTPメソッドはGETだかららしい
