@@ -130,3 +130,13 @@ data: { "turbo-method": :post }
 ```
 POSTメソッドの記述を変えればエラーがでなくなった
 リンクのデフォルトのHTTPメソッドはGETだかららしい
+
+
+## バリデーションの書き方
+model/post.rb
+```SHELL
+class Post < applicationRecord
+  validates :content, {presence: true}
+  # validates :検証するカラム名, {検証する内容}
+end
+```
