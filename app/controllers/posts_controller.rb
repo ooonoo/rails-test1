@@ -20,10 +20,14 @@ class PostsController < ApplicationController
     # URLのidから投稿データを取得する
     @post.content = params[:content]
     # 取得した投稿データのcontentを上書き
-    @post.save
+    if @post.save
     # 上書きした投稿データを保存する
-    redirect_to ("/posts/index")
-    # 投稿一覧画面に戻る
+      redirect_to ("/posts/index")
+    # 成功したら投稿一覧画面に戻る
+    else
+      redirect_to ("/posts/#{@post.id}/edit")
+    # 失敗したら編集画面に戻る
+    end
   end
   
   def destroy
