@@ -25,8 +25,9 @@ class PostsController < ApplicationController
       redirect_to ("/posts/index")
     # 成功したら投稿一覧画面に戻る
     else
-      redirect_to ("/posts/#{@post.id}/edit")
+      render ("posts/edit")
     # 失敗したら編集画面に戻る
+    # 失敗時の入力を残す
     end
   end
   
