@@ -143,3 +143,12 @@ class Post < applicationRecord
   # validates :検証するカラム名, {検証する内容}
 end
 ```
+
+## エラーメッセージ箇所のメモ
+```SHELL
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+```
