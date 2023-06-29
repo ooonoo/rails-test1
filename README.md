@@ -144,6 +144,20 @@ class Post < applicationRecord
 end
 ```
 
+## サクセスメッセージ　ページ上に１度だけメッセージ表示　変数flash
+### アクション
+```SHELL
+flash[:notice]
+```
+###
+```SHELL
+<% if flash[:notice] %>
+ <div class="flash">
+  <%= flash[:notice] %>
+  </div>
+<% end %>
+```
+
 ## エラーメッセージ箇所のメモ
 ```SHELL
           <% @post.errors.full_messages.each do |message| %>
