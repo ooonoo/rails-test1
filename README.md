@@ -147,7 +147,7 @@ end
 ## サクセスメッセージ　ページ上に１度だけメッセージ表示　変数flash
 ### アクション
 ```SHELL
-flash[:notice]
+flash[:notice] = "表示したい文字列"
 ```
 ###
 ```SHELL
