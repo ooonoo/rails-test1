@@ -22,6 +22,7 @@ class PostsController < ApplicationController
     # 取得した投稿データのcontentを上書き
     if @post.save
     # 上書きした投稿データを保存する
+      flash[:notice] = "投稿を編集しました"
       redirect_to ("/posts/index")
     # 成功したら投稿一覧画面に戻る
     else

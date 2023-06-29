@@ -27,6 +27,11 @@
     </li> 
   </ul>
   </header>
+  <% if %>
+   <div class="flash">
+    <%= flash[:notice] %>
+   </div>
+  <% end %>
     <%= yield %>
   </body>
 </html>
