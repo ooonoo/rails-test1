@@ -11,11 +11,13 @@ rails generate controller posts index
 ## マイグレーションファイル作成(データベースに変更を指示)
 ```SHELL
 rails generate　model Post content:text
+
+rails g model User name:string email:string
 ```
 ### Post = モデル名 
 ### 「postsテーブルを作成する場合は単数形で」
 ###　content = カラム名 
-### text = データ型
+### text,string = データ型
 
 ## テーブルの作成
 ```SHELL
