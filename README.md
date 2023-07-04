@@ -48,6 +48,12 @@ quit
 ```
 post.saveはpost.rbにより使える
 
+複数の時
+```SHELL
+ user = User.new(name: "にんじゃわんこ", email: "wanko@prog-8.com")
+ user.save
+```
+
 
 ## 共通のレイアウトをまとめる
 views/layouts/application.html.erbに共通事項はまとめる
