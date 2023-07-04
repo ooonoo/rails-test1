@@ -149,6 +149,8 @@ class Post < applicationRecord
   validates :content, {presence: true,length:{maximum:140}}
   # 140文字以上でエラーも追加
   # validates :検証するカラム名, {検証する内容}
+  validates :email, {uniqueness: true}
+  #　重複するものがあればエラー
 end
 ```
 
