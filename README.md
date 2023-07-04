@@ -3,6 +3,7 @@
 ## ページ作成
 ```SHELL
 rails generate controller posts index
+rails g controller user index
 ```
 ### rails g　と省略可
 ### posts = コントローラ名
