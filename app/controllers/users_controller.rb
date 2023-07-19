@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(
       name:params[:name],
       email:params[:email]
+      
     )
     
     if @user.save
