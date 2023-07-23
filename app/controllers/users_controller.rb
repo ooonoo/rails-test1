@@ -36,6 +36,7 @@ class UsersController < ApplicationController
     @user.email = params[:email]
 
     @user.image_name = "#{@user.id}.jpg"
+    image = params[:image]
 
     if @user.save
       flash[:notice] = "ユーザー情報を編集しました"
