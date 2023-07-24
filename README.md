@@ -177,3 +177,14 @@ flash[:notice] = "表示したい文字列"
             </div>
           <% end %>
 ```
+
+## loginアクションのルーティング
+```SHELL
+<%= link_to("ログイン","/login") %>
+# →get "login" => "users#login_form"
+# link_toはデフォルトでgetを探す
+<%= form_tag("/login") do %>
+<% end %>
+# →post "login" => "users#login"
+# form_tagはデフォルトでpostを探す
+```
