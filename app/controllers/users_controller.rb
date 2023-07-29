@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(
       name:params[:name],
       email:params[:email],
+      password: "password", # TODO: パスワードを受け取る処理を追加する
       image_name: "default.jpg"
     )
     
@@ -24,6 +25,9 @@ class UsersController < ApplicationController
       redirect_to("/users/#{@user.id}")
     else
       render("users/new")
+      Rails.logger.info "ERROR: 作成に失敗しました"
+      Rails.logger.info "ERROR: #{@user.errors.full_messages}"
+      # TODO: エラーメッセージを新規ユーザー登録画面に表示させる処理を追加する
     end
   end
   def edit
@@ -51,7 +55,7 @@ class UsersController < ApplicationController
   end
 
   def login_form
-    
+
   end
 
 
