@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(
       name:params[:name],
       email:params[:email],
-      password: "password", # TODO: パスワードを受け取る処理を追加する
+      password:params[:password], # TODO: パスワードを受け取る処理を追加する
       image_name: "default.jpg"
     )
     
