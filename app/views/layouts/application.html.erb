@@ -16,6 +16,12 @@
      <%= link_to("TweetApp","/") %>
   </div>
   <ul class="header-menus">
+    <% if session[:user_id] %>
+    <%#ログイン中であればidを表示させる %>
+      <li>
+       <%= session[:user_id] %>
+      </li>
+    <% end %>
     <li>
       <%= link_to("TweetAppとは","/about") %>
     </li>

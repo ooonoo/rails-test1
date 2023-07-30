@@ -63,6 +63,8 @@ class UsersController < ApplicationController
                          password: params[:password])
     # 入力内容と一致するユーザーを取得し変数@userに代入
     if @user
+      session[:user_id] = @user.id
+      # user.id = hoge が保持される
       flash[:notice] = "ログインしました"
       redirect_to("/posts/index")
     else
