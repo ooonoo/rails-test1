@@ -3,6 +3,14 @@
     <div class="form-heading">ログイン</div>
     <div class="form users-form">
       <div class="form-body">
+      <% binding.pry %>
+      <div>
+        <% if @error_message %>
+          <div>
+            <%= @error_message.present? ?  @error_message : "なし" %>
+          </div>
+        <% end %>
+       </div>
        <%= form_tag("/login") do %>
         <p>メールアドレス</p>
         <input name="email">
