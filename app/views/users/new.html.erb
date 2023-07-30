@@ -14,15 +14,12 @@
           <% end %>
 
           <p>ユーザー名</p>
-          <%= form.text_field :name, value: @user.name %>
-
+          <input name="name" value="<%= @user.name %>">
           <p>メールアドレス</p>
-          <%= form.text_field :email, value: @user.email %>
-
+          <input name="email" value="<%= @user.email %>">
           <p>パスワード</p>
-          <%= form.text_field :password, value: @user.password %>
-
-          <%= form.submit "新規登録" %>
+          <input name="password" type="password" value="<%= @user.password %>">
+          <input type="submit" value="新規登録">
         </div>
       </div>
     <% end %>
