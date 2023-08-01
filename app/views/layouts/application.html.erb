@@ -16,10 +16,11 @@
      <%= link_to("TweetApp","/") %>
   </div>
   <ul class="header-menus">
-    <% if session[:user_id] %>
+    <% current_user=User.find_by(id: session[:user_id]) %>
+    <% if current_user %>
     <%#ログイン中であればidを表示させる %>
       <li>
-       <%= session[:user_id] %>
+        <%= link_to(current_user.name,"/users/#{current_user.id}") %>
       </li>
       <li>
         <%= link_to("投稿一覧", "/posts/index") %>
