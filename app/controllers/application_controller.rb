@@ -14,5 +14,9 @@ class ApplicationController < ActionController::Base
    # ログインしていない状態で直接ログイン時に表示される項目へ入れないようにするためのアクション
 
    def forbid_login_user
+    if @current_user
+        flash[:notice] = "すでにログインしています"
+        redirect_to("/posts/undex")
    end
+   # ログイン時に直接ログインしていない状態に表示される項目へ入れないようにするためのアクション
 end
