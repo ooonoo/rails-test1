@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
         flash[:notice] = "ログインが必要です"
         redirect_to("/login")
     end
-
    end
    # ログインしていない状態で直接ログイン時に表示される項目へ入れないようにするためのアクション
+
+   def forbid_login_user
+   end
 end
