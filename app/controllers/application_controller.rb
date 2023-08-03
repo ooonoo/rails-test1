@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
     if @current_user
         flash[:notice] = "すでにログインしています"
         redirect_to("/posts/undex")
+    end
    end
    # ログイン時に直接ログインしていない状態に表示される項目へ入れないようにするためのアクション
 end
