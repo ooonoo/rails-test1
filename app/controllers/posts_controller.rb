@@ -7,7 +7,12 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id:params[:id])
-    @user = User.find_by(id: @post.user_id)
+    @user = @post.user
+    # post.rbに(1)の記述をすることで(2)の記述を簡略化できる
+    # (1)def user
+      #   return User.find_by(id: self.user_id)
+    #    end
+    # (2)@user = User.find_by(id: @post.user_id)
     # @userを定義し@post.user_idのユーザーを代入
   end
 
