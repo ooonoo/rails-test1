@@ -7,6 +7,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id:params[:id])
+    @user = User.find_by(id: @post.user_id)
+    # @userを定義し@post.user_idのユーザーを代入
   end
 
   def new
